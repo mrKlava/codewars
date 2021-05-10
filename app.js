@@ -11,17 +11,31 @@
 */
 
 
-let arr = [1, 2, 0, 'aasf', '1', '123', 123];
+// let arr = [1, 2, 0, 'aasf', '1', '123', 123];
 
 
-function filterList(arr) {
+// function filterList(arr) {
 
-    return arr.filter(function(item) {
-        if (typeof(item) === "number") {
+//     return arr.filter(function(item) {
+//         if (typeof(item) === "number") {
 
-            return true;
-        };
-    });
+//             return true;
+//         };
+//     });
+// };
+
+// console.log(filterList(arr));
+
+
+
+
+/*
+    Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+
+    [Make sure you type the exact thing I wrote or the program may not execute properly]
+*/
+
+function greet(name){
+    return "Hello, ${name} how are you doing today?"
 };
 
-console.log(filterList(arr));
