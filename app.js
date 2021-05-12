@@ -10,7 +10,6 @@
 
 */
 
-
 // let arr = [1, 2, 0, 'aasf', '1', '123', 123];
 
 
@@ -24,7 +23,6 @@
 //     });
 // };
 
-// console.log(filterList(arr));
 
 
 
@@ -35,7 +33,28 @@
     [Make sure you type the exact thing I wrote or the program may not execute properly]
 */
 
-function greet(name){
-    return "Hello, ${name} how are you doing today?"
-};
+// function greet(name){
+//     return "Hello, ${name} how are you doing today?"
+// };
+
+
+
+
+
+/*
+    Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+*/
+
+/*
+    Best solution was:
+
+    function removeExclamationMarks(s) {
+        return s.replace(/!/g, '');
+    }
+*/
+
+// function removeExclamationMarks(s) {
+//     return s.split("").filter(item => {return item !== "!"}).join("");
+// }
+
 
