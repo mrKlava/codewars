@@ -58,3 +58,76 @@
 // }
 
 
+
+
+
+/*
+Simple, given a string of words, return the length of the shortest word(s).
+
+String will never be empty and you do not need to account for different data types.
+
+    Solutions:
+        function findShort(s){
+            return Math.min.apply(null, s.split(' ').map(w => w.length));
+        }
+
+        function findShort(s){
+            return Math.min(...s.split(" ").map (s => s.length));
+        }
+*/
+
+// function findShort(s){
+//     let arr = s.split(" ")
+//                 .map((item) => item.length)
+//                 .sort((a, b) => a - b);
+    
+//     return arr[0];
+// }
+
+// console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
+
+
+
+
+
+/*
+Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+Examples:
+Input: 42145 Output: 54421
+
+Input: 145263 Output: 654321
+
+Input: 123456789 Output: 987654321
+*/
+
+// function descendingOrder(n) {
+//     return +String(n).split("").sort((a, b) => b - a).join("");
+// }
+
+// console.log(descendingOrder(1023456789));
+
+
+
+
+
+/*
+Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+
+For example:
+
+uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+*/
+
+let uniqueInOrder = function(iterable) {
+    let arr = Array.from(iterable).filter(function(item) {
+        
+    })
+
+    return arr;
+}
+
+console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+console.log(uniqueInOrder([1,2,2,3,3]));
