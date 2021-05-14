@@ -122,11 +122,16 @@ uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 */
 
 let uniqueInOrder = function(iterable) {
-    let arr = Array.from(iterable).filter(function(item) {
-        
-    })
+    let arr = Array.from(iterable);
+    let newArr = [];
 
-    return arr;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== newArr[newArr.length - 1]) {
+            newArr.push(arr[i])
+        }
+    }
+
+    return newArr
 }
 
 console.log(uniqueInOrder('AAAABBBCCDAABBB'));
