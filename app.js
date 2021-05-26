@@ -121,18 +121,70 @@ uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 */
 
-let uniqueInOrder = function(iterable) {
-    let arr = Array.from(iterable);
-    let newArr = [];
+// let uniqueInOrder = function(iterable) {
+//     let arr = Array.from(iterable);
+//     let newArr = [];
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] !== newArr[newArr.length - 1]) {
-            newArr.push(arr[i])
-        }
-    }
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] !== newArr[newArr.length - 1]) {
+//             newArr.push(arr[i])
+//         }
+//     }
 
-    return newArr
+//     return newArr
+// }
+
+// function uniqueInOrder(iterable) {
+//     let arr = [];
+
+//     for (let i = 0; i < iterable.length; i++) {
+//         if (arr[arr.length - 1] !== iterable[i]) {
+//             arr.push(iterable[i])
+//         }
+//     }
+
+//     return arr;
+// }
+
+// console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+// console.log(uniqueInOrder([1,2,2,3,3]));
+
+
+
+
+
+/*
+Given a string of words, you need to find the highest scoring word.
+
+Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+
+You need to return the highest scoring word as a string.
+
+If two words score the same, return the word that appears earliest in the original string.
+
+All letters will be lowercase and all inputs will be valid.
+*/
+
+function high(x) {
+    let arr = x.split(" ");
+    let scores = arr.map(function(item) {
+        return item.split("").reduce(function(prVal, item) {
+            for (let i = 0; i < item.length; i++) {
+                return prVal += item[i].charCodeAt() - 96;
+            }
+        }, 0)
+    });
+
+    let biggest = function(arr) {
+        return Math.max.apply(null, arr)
+    };
+
+    let indexOfWord = scores.indexOf(biggest(scores));
+
+    return arr[indexOfWord];
 }
 
-console.log(uniqueInOrder('AAAABBBCCDAABBB'));
-console.log(uniqueInOrder([1,2,2,3,3]));
+
+console.log(high("a b"));
+console.log(high("man i need a taxi up to ubud"));
+console.log(high("what time are we climbing up the volcano"));
